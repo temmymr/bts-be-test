@@ -63,9 +63,9 @@ class ListitemController extends Controller
             'itemName' => ['required', 'string', 'max:255'],
         ]);
 
-        $item = Listitem::query()->where('checklist_id', $checklistId)->where('id', $checklistItemId)->first();
+        $item = Listitem::query()->where('id', $checklistItemId)->where('checklist_id', $checklistId)->first();
 
-        $item->query()->update([
+        $item->update([
             'item_name' => $request->itemName,
         ]);
 
