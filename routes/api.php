@@ -29,4 +29,5 @@ Route::middleware(['auth:sanctum'])->group(function() {
     Route::put('checklist/{checklistId}/item/{checklistItemId}', [ListitemController::class, 'update']);
     Route::delete('checklist/{checklistId}/item/{checklistItemId}', [ListitemController::class, 'destroy']);
     // Route::get('checklist/{checklistId}/item', [ListitemController::class, 'index']);
+    Route::patch('checklist/{checklistId}/item/rename/{checklistItemId}', [ListitemController::class, 'update']);
 });
